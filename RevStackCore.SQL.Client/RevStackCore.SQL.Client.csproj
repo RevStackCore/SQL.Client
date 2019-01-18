@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>RevStackCore.SQL.Client</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>S. Francis</Authors>
+    <Description>Generic Typed POCO client for SQL compliant data sources</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Net Standard 2.0 release</PackageReleaseNotes>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageTags>RevStackCore SQL Client</PackageTags>	
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="1.50.5" />
+    <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
+    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.0.0" />
+  </ItemGroup>
+</Project>

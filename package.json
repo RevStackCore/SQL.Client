@@ -1,0 +1,19 @@
+{
+  "name": "RevStackCore.SQL.Client",
+  "version": "1.0.0",
+  "description": "Generic Typed POCO client for SQL compliant data sources",
+  "main": "RevStackCore.SQL.Client.sln",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RevStackCore/SQL.Client.git"
+  },
+  "author": "S. Francis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RevStackCore/SQL.Client/issues"
+  },
+  "homepage": "https://github.com/RevStackCore/SQL.Client"
+}
