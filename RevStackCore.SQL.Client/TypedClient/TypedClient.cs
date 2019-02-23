@@ -70,7 +70,7 @@ namespace RevStackCore.SQL.Client
                 bool setIdFromResult = false;
                 var type = entity.GetType();
                 var idProperty = type.GetProperty("Id");
-                if(idProperty==null & (_tKeyType == typeof(int) || _tKeyType == typeof(long)))
+                if(idProperty==null && (_tKeyType == typeof(int) || _tKeyType == typeof(long) || _tKeyType==typeof(int?) || _tKeyType==typeof(long?)))
                 {
                     setIdFromResult = true;
                 }
@@ -78,7 +78,7 @@ namespace RevStackCore.SQL.Client
                 var r=db.Insert(entity);
                 if(setIdFromResult && r!=default(long))
                 {
-                    if(_tKeyType == typeof(int))
+                    if(_tKeyType == typeof(int) || _tKeyType==typeof(int?))
                     {
                         int intId = Convert.ToInt32(r);
                         idProperty.SetValue(entity, intId);
