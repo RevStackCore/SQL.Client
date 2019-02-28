@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using Dapper;
-using Dapper.Contrib.Extensions;
 using RevStackCore.Pattern;
 using RevStackCore.Extensions.SQL;
 

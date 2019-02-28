@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Dapper;
 using System.Data;
-using Dapper.Contrib.Extensions;
+using RevStackCore.Extensions.SQL;
 
 namespace RevStackCore.SQL.Client
 {

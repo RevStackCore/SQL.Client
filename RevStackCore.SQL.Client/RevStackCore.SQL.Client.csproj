@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RevStackCore.SQL.Client</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Generic Typed POCO client for SQL compliant data sources</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -16,8 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper.Contrib" Version="1.50.5" />
     <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
-    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.0.0" />
+    <PackageReference Include="Dapper" Version="1.50.7" />
+    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.1.0" />
   </ItemGroup>
 </Project>
