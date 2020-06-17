@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using Dapper;
 using RevStackCore.Pattern;
 using RevStackCore.Extensions.SQL;
+using RevStackCore.DataAnnotations;
+
 
 namespace RevStackCore.SQL.Client
 {
@@ -19,7 +22,13 @@ namespace RevStackCore.SQL.Client
         public TypedClient(string connectionString, SQLLanguageType languageType)
         {
             _connectionString = connectionString;
-            _type = typeof(TEntity).Name;
+            var entityType = typeof(TEntity);
+            _type = entityType.Name;
+            var tableAttribute = entityType.GetCustomAttribute<TableAttribute>(true);
+            if (tableAttribute != null && !string.IsNullOrEmpty(tableAttribute.Name))
+            {
+                _type = tableAttribute.Name;
+            }
             _tKeyType = typeof(TKey);
             _languageType = languageType;
         }
