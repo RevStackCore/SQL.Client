@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Dapper;
 using System.Data;
 using RevStackCore.Extensions.SQL;
+using RevStackCore.DataAnnotations;
+using System.Reflection;
 
 namespace RevStackCore.SQL.Client
 {
@@ -11,7 +13,15 @@ namespace RevStackCore.SQL.Client
         public static void SetTableNameMapper()
         {
             SqlMapperExtensions.TableNameMapper = (type) => {
-                return type.Name;
+                var tableAttribute = type.GetCustomAttribute<TableAttribute>(true);
+                if (tableAttribute != null && !string.IsNullOrEmpty(tableAttribute.Name))
+                {
+                    return tableAttribute.Name;
+                }
+                else
+                {
+                    return type.Name;
+                }
             };
         }
 

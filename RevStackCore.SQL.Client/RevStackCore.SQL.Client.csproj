@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RevStackCore.SQL.Client</PackageId>
-    <PackageVersion>1.1.1</PackageVersion>
+    <PackageVersion>1.1.2</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Generic Typed POCO client for SQL compliant data sources</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
