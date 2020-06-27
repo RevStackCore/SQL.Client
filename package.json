@@ -1,6 +1,6 @@
 {
   "name": "RevStackCore.SQL.Client",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Generic Typed POCO client for SQL compliant data sources",
   "main": "RevStackCore.SQL.Client.sln",
   "scripts": {
