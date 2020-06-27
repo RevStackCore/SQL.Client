@@ -3,10 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RevStackCore.SQL.Client</PackageId>
-    <PackageVersion>1.2.0</PackageVersion>
+    <PackageVersion>1.2.1</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Generic Typed POCO client for SQL compliant data sources</Description>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Net Standard 2.0 release</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/RevStackCore/SQL.Client.git</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RevStackCore/SQL.Client/blob/master/LICENSE</PackageLicenseUrl>
@@ -18,6 +17,6 @@
   <ItemGroup>
     <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
     <PackageReference Include="Dapper" Version="1.50.7" />
-    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.2.0" />
+    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.2.1" />
   </ItemGroup>
 </Project>
