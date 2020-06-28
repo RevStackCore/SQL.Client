@@ -10,8 +10,13 @@ namespace RevStackCore.SQL.Client
 {
     public static class SQLExtensions
     {
-        public static void SetTableNameMapper()
+        public static void SetTableNameMapper(bool mapPropertiesToUnderscore=false)
         {
+            if (mapPropertiesToUnderscore)
+            {
+                DefaultTypeMap.MatchNamesWithUnderscores = true;
+            }
+
             SqlMapperExtensions.TableNameMapper = (type) => {
                 var tableAttribute = type.GetCustomAttribute<TableAttribute>(true);
                 if (tableAttribute != null && !string.IsNullOrEmpty(tableAttribute.Name))
@@ -22,6 +27,7 @@ namespace RevStackCore.SQL.Client
                 {
                     return type.Name;
                 }
+               
             };
         }
 
