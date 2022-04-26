@@ -56,6 +56,28 @@ namespace RevStackCore.SQL.Client
             }
         }
 
+        public IEnumerable<TResult> Query<TResult>(string sql)
+        {
+            var connection = new TConnection();
+            connection.ConnectionString = _connectionString;
+            using (IDbConnection db = connection)
+            {
+                var query = db.Query<TResult>(sql).ToList();
+                return query;
+            }
+        }
+
+        public TResult QueryFirst<TResult>(string sql)
+        {
+            var connection = new TConnection();
+            connection.ConnectionString = _connectionString;
+            using (IDbConnection db = connection)
+            {
+                var query = db.QueryFirst<TResult>(sql);
+                return query;
+            }
+        }
+
         public TEntity GetById(TKey id)
         {
             var connection = new TConnection();
