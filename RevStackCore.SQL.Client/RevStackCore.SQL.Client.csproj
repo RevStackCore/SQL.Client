@@ -15,11 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="RevStackCore.Extensions.SQL" Version="9.0.0" />
     <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
     <PackageReference Include="Dapper" Version="2.1.35" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\RevStackCore.Extensions.SQL\RevStackCore.Extensions.SQL\RevStackCore.Extensions.SQL.csproj" />
   </ItemGroup>
 </Project>
