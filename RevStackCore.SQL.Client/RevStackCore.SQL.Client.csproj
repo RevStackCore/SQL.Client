@@ -1,22 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RevStackCore.SQL.Client</PackageId>
-    <PackageVersion>1.3.0</PackageVersion>
+    <PackageVersion>9.0.0</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Generic Typed POCO client for SQL compliant data sources</Description>
     <PackageReleaseNotes>Net Standard 2.0 release</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/RevStackCore/SQL.Client.git</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RevStackCore/SQL.Client/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl>https://s3.amazonaws.com/revstack/icons/revstackcore-64x64.png</PackageIconUrl>
-    <Copyright>Copyright 2022</Copyright>
+    <Copyright>Copyright 2025</Copyright>
     <PackageTags>RevStackCore SQL Client</PackageTags>	
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
-    <PackageReference Include="Dapper" Version="1.50.7" />
-    <PackageReference Include="RevStackCore.Extensions.SQL" Version="1.2.4" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RevStackCore.Extensions.SQL\RevStackCore.Extensions.SQL\RevStackCore.Extensions.SQL.csproj" />
   </ItemGroup>
 </Project>
